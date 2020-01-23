@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bear_grylls/facts.dart';
 import 'dart:async';
 import 'dart:io';
 import 'package:camera/camera.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: BearFacts(),
     );
   }
 }
