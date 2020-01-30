@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4a66844b-0358-49cc-a4f9-782e2e5c5e05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/bear-grylls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bear-grylls.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bear_grylls/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bear_grylls/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bear_grylls/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bear_grylls/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bear_grylls/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bear_grylls/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bear_grylls/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bear_grylls/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,43 +18,9 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_26" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bear_grylls/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#110#955#0" />
-                <element signature="e#997#1591#0" />
-                <element signature="e#1642#4339#0" />
-                <element signature="e#4571#5157#0" />
-                <element signature="e#4458#4669#0" />
-                <element signature="e#5551#8345#0" />
-                <element signature="e#6133#6248#0" />
-                <element signature="e#6299#8343#0" />
-                <element signature="e#8455#8881#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bear_grylls/android/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bear_grylls/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/bear_grylls/lib/camera.dart">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -78,7 +41,6 @@
     <option name="files">
       <list>
         <option value="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
       </list>
     </option>
   </component>
@@ -92,61 +54,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="bear-grylls" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bear-grylls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bear-grylls" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bear-grylls" type="462c0819:PsiDirectoryNode" />
+              <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
               <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bear-grylls" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bear-grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bear-grylls" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bear-grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bear-grylls" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bear-grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bear-grylls" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bear-grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Dart/dart-sdk/bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stacy\Documents\Github\bear_grylls\bear_grylls\lib" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -238,9 +173,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17114094" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17114094" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -248,16 +184,16 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="Build Variants" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.22379604" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.2266289" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.2266289" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info anchor="bottom" id="Debug" order="5" />
       <window_info anchor="bottom" id="Logcat" order="6" />
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.22379604" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -272,25 +208,10 @@
     <entry file="file://$PROJECT_DIR$/.idea/codeStyles/Project.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bear_grylls/.packages">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bear_grylls/bear_grylls.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bear_grylls/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bear_grylls/.flutter-plugins">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bear_grylls/.flutter-plugins-dependencies">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bear_grylls/.packages" />
+    <entry file="file://$PROJECT_DIR$/bear_grylls/bear_grylls.iml" />
+    <entry file="file://$PROJECT_DIR$/bear_grylls/.flutter-plugins" />
+    <entry file="file://$PROJECT_DIR$/bear_grylls/.flutter-plugins-dependencies" />
     <entry file="file://$PROJECT_DIR$/bear_grylls/android/app/src/profile/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -304,34 +225,35 @@
     <entry file="file://$PROJECT_DIR$/bear_grylls/android/app/src/debug/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/bear_grylls/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/bear_grylls/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="850">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#110#955#0" />
-            <element signature="e#997#1591#0" />
-            <element signature="e#1642#4339#0" />
-            <element signature="e#4571#5157#0" />
-            <element signature="e#4458#4669#0" />
-            <element signature="e#5551#8345#0" />
-            <element signature="e#6133#6248#0" />
-            <element signature="e#6299#8343#0" />
-            <element signature="e#8455#8881#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bear_grylls/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/bear_grylls/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bear_grylls/android/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="456">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bear_grylls/lib/camera.dart">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
