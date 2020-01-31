@@ -14,7 +14,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Obtain a list of the available cameras on the device.
-  final cameras = await availableCameras();
+  //final cameras = await availableCameras();
 
   // Get a specific camera from the list of available cameras.
   //final firstCamera = cameras.first;
@@ -24,7 +24,7 @@ Future<void> main() async {
       theme: ThemeData.dark(),
       home: FirstRoute(
         // Pass the appropriate camera to the TakePictureScreen widget.
-        //camera: cameras.first,
+        //camera: firstCamera,
       ),
     ),
   );
