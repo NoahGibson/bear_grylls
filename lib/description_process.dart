@@ -220,7 +220,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
             await _controller.takePicture(path);
 
             // If the picture was taken, display it on a new screen.
-            Navigator.push(
+            await Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => DisplayPictureScreen(imagePath: path),
