@@ -292,9 +292,9 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          //onPressed: () {
-           //   Navigator.pop(context);
-          //},
+          onPressed: () {
+              //Navigator.pop(context);
+          },
           //child: Text('Go back!'),
         //)
           child:Image.asset(

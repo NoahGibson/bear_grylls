@@ -17,14 +17,14 @@ Future<void> main() async {
   final cameras = await availableCameras();
 
   // Get a specific camera from the list of available cameras.
-  final firstCamera = cameras.first;
+  //final firstCamera = cameras.first;
 
   runApp(
     MaterialApp(
       theme: ThemeData.dark(),
       home: FirstRoute(
         // Pass the appropriate camera to the TakePictureScreen widget.
-        //camera: firstCamera,
+        //camera: cameras.first,
       ),
     ),
   );
@@ -292,9 +292,9 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          //onPressed: () {
+          onPressed: () {
            //   Navigator.pop(context);
-          //},
+          },
           //child: Text('Go back!'),
         //)
           child:Image.asset(
