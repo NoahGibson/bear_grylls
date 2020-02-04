@@ -14,38 +14,55 @@ import 'package:path_provider/path_provider.dart';
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
 
-
-  final CameraDescription camera;
-
+/*
   const TakePictureScreen({
     Key key,
     @required this.camera,
   }) : super(key: key);
+*/
 
   @override
-  TakePictureScreenState createState() => TakePictureScreenState();
+  _TakePictureScreenState createState() => _TakePictureScreenState();
 }
 
-class TakePictureScreenState extends State<TakePictureScreen> {
+
+class _TakePictureScreenState extends State<TakePictureScreen> {
+
+  //CameraDescription camera;
 
   CameraController _controller;
   Future<void> _initializeControllerFuture;
 
-  @override
-  void initState() {
-    super.initState();
+  Future<void> initCamera() async {
+    // Ensure that plugin services are initialized so that `availableCameras()`
+    // can be called before `runApp()`
+    //WidgetsFlutterBinding.ensureInitialized();
+
+    // Obtain a list of the available cameras on the device.
+    final cameras = await availableCameras();
+
+    // Get a specific camera from the list of available cameras.
+    final firstCamera = cameras.first;
 
     // To display the current output from the Camera,
     // create a CameraController.
     _controller = CameraController(
       // Get a specific camera from the list of available cameras.
-      widget.camera,
+      firstCamera,
       // Define the resolution to use.
       ResolutionPreset.medium,
     );
 
     // Next, initialize the controller. This returns a Future.
     _initializeControllerFuture = _controller.initialize();
+
+
+  }
+
+  @override
+  void initState(){
+    super.initState();
+    initCamera();
   }
 
   @override
@@ -133,55 +150,6 @@ class DisplayPictureScreen extends StatelessWidget {
       height: 240,
     )
     )
-    );
-  }
-}
-
-
-class FirstRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Bear Grylls'),
-      ),
-      body: Center(
-        child: RaisedButton(
-          child: Text('Take a Picture'),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SecondRoute()),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class SecondRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Polar Bear!"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          //onPressed: () {
-           //   Navigator.pop(context);
-          //},
-          //child: Text('Go back!'),
-        //)
-          child:Image.asset(
-          'Images/BEAR.jpg',
-          width: 600,
-          height: 500,
-          //fit: BoxFit.cover,
-          ),
-        )
-      ),
     );
   }
 }
