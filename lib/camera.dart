@@ -3,9 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:bear_grylls/facts.dart';
 import 'dart:async';
-import 'dart:io';
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
@@ -222,7 +220,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
             await _controller.takePicture(path);
 
             // If the picture was taken, display it on a new screen.
-            Navigator.push(
+            await Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => DisplayPictureScreen(imagePath: path),
@@ -294,9 +292,9 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          //onPressed: () {
-           //   Navigator.pop(context);
-          //},
+          onPressed: () {
+              //Navigator.pop(context);
+          },
           //child: Text('Go back!'),
         //)
           child:Image.asset(

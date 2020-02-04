@@ -3,9 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:bear_grylls/facts.dart';
 import 'dart:async';
-import 'dart:io';
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
@@ -16,10 +14,10 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Obtain a list of the available cameras on the device.
-  final cameras = await availableCameras();
+  //final cameras = await availableCameras();
 
   // Get a specific camera from the list of available cameras.
-  final firstCamera = cameras.first;
+  //final firstCamera = cameras.first;
 
   runApp(
     MaterialApp(
@@ -222,7 +220,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
             await _controller.takePicture(path);
 
             // If the picture was taken, display it on a new screen.
-            Navigator.push(
+            await Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => DisplayPictureScreen(imagePath: path),
@@ -294,9 +292,9 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          //onPressed: () {
+          onPressed: () {
            //   Navigator.pop(context);
-          //},
+          },
           //child: Text('Go back!'),
         //)
           child:Image.asset(
