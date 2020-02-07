@@ -1,68 +1,64 @@
-//Opens camera. Output: image
-
-import 'package:flutter/material.dart';
-import 'package:bear_grylls/facts.dart';
 import 'dart:async';
-import 'dart:io';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
-
-
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
-
-/*
-  const TakePictureScreen({
-    Key key,
-    @required this.camera,
-  }) : super(key: key);
-*/
 
   @override
   _TakePictureScreenState createState() => _TakePictureScreenState();
 }
 
-
 class _TakePictureScreenState extends State<TakePictureScreen> {
-
-  //CameraDescription camera;
 
   CameraController _controller;
   Future<void> _initializeControllerFuture;
 
-  Future<void> initCamera() async {
-    // Ensure that plugin services are initialized so that `availableCameras()`
-    // can be called before `runApp()`
-    //WidgetsFlutterBinding.ensureInitialized();
+  Future _initCameraController(CameraDescription cameraDescription) async {
+    if (_controller != null) {
+      await _controller.dispose();
+    }
 
-    // Obtain a list of the available cameras on the device.
-    final cameras = await availableCameras();
+    _controller = CameraController(cameraDescription, ResolutionPreset.high);
 
-    // Get a specific camera from the list of available cameras.
-    final firstCamera = cameras.first;
+    // If the controller is updated then update the UI.
+    _controller.addListener(() {
+      if (mounted) {
+        setState(() {});
+      }
+      if (_controller.value.hasError) {
+        print('Camera error ${_controller.value.errorDescription}');
+      }
+    });
 
-    // To display the current output from the Camera,
-    // create a CameraController.
-    _controller = CameraController(
-      // Get a specific camera from the list of available cameras.
-      firstCamera,
-      // Define the resolution to use.
-      ResolutionPreset.medium,
-    );
+    try {
+      _initializeControllerFuture = _controller.initialize();
+      await _initializeControllerFuture;
+    } on CameraException catch (e) {
+      print(e);
+    }
 
-    // Next, initialize the controller. This returns a Future.
-    _initializeControllerFuture = _controller.initialize();
-
-
-  }
+    if (mounted) {
+      setState(() {});
+    }
+  }  
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    initCamera();
+    
+    availableCameras().then((availableCameras) {
+      if (availableCameras.length > 0) {
+        _initCameraController(availableCameras[0]).then((void v) {});
+      }else{
+        print("No camera available");
+      }
+    }).catchError((err) {
+      print('Error: $err.code\nError Message: $err.message');
+    });
   }
 
   @override
@@ -82,15 +78,16 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       body: FutureBuilder<void>(
         future: _initializeControllerFuture,
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
+          if (_controller == null || ! _controller.value.isInitialized) {
+            // If camera not ready, display loading indicator
+            return Center(child: CircularProgressIndicator());
+          } else {
             // If the Future is complete, display the preview.
             return CameraPreview(_controller);
-          } else {
-            // Otherwise, display a loading indicator.
-            return Center(child: CircularProgressIndicator());
           }
         },
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.camera_alt),
         // Provide an onPressed callback.
