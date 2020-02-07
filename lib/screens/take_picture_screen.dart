@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
+import 'picture_detail_screen.dart';
+
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
 
@@ -114,7 +116,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
             await Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => DisplayPictureScreen(imagePath: path),
+                builder: (context) => PictureDetailScreen(imagePath: path),
               ),
             );
           } catch (e) {
@@ -123,30 +125,6 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
           }
         },
       ),
-    );
-  }
-}
-
-// A widget that displays the picture taken by the user.
-class DisplayPictureScreen extends StatelessWidget {
-  final String imagePath;
-
-  const DisplayPictureScreen({Key key, this.imagePath}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Display the Picture')),
-      // The image is stored as a file on the device. Use the `Image.file`
-      // constructor with the given path to display the image.
-      //body: Image.file(File(imagePath)),
-    body: Center(
-      child:  Image.asset(
-        'Images/BEAR.jpg',
-        width: 600,
-      height: 240,
-    )
-    )
     );
   }
 }
