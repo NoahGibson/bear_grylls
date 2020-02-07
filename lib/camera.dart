@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
@@ -50,7 +51,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     super.initState();
     
     availableCameras().then((availableCameras) {
-      if (availableCameras.length > 0) {
+      if (availableCameras.isNotEmpty) {
         _initCameraController(availableCameras[0]).then((void v) {});
       }else{
         print("No camera available");
