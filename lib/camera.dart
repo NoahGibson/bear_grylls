@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
@@ -111,7 +110,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
             await _controller.takePicture(path);
 
             // If the picture was taken, display it on a new screen.
-            Navigator.push(
+            await Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => DisplayPictureScreen(imagePath: path),

@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
 
   testWidgets('app should run', (tester) async {
-    await tester.pumpWidget(new MyApp());
+    await tester.pumpWidget(MyApp());
   });
 
 }
