@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'take_picture_screen.dart' as camera;
+import '../take_picture_screen/take_picture_screen.dart' as camera;
 
 class HomeScreen extends StatelessWidget {
   
