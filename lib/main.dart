@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'screens/home_screen.dart' as home;
+import 'screens/home_screen/home_screen.dart' as home;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
