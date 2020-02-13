@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:bear_grylls/services/animal_discovery.dart';
 import 'package:bear_grylls/services/classify_species.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
   }
 
   void _getAnimalDetails(String animalName) async {
-    animalDetails = " is dangerous when provoked. Keep a safe distance.";
+    animalDetails = await AnimalDiscovery().getFacts(animalName);
   }
 
   Future<void> _initScreenInfo() async {
@@ -58,28 +59,30 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
           if (!_detailsAreInitialized) {
             return Center(child: CircularProgressIndicator());
           } else {
-            return Container(
-              child: Column(
+            return SingleChildScrollView(
+              child: Container(
+                child: Column(
 
-                children: <Widget>[
+                  children: <Widget>[
 
-                  Image.file(File(widget.imagePath),
-                    width: 200.0,
-                  ),
+                    Image.file(File(widget.imagePath),
+                      width: 200.0,
+                    ),
 
-                  Text(
-                    'Identified as a: ' + animalName,
-                    style: TextStyle(height: 2, fontWeight: FontWeight.bold, fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
+                    Text(
+                      'Identified as a: ' + animalName,
+                      style: TextStyle(height: 2, fontWeight: FontWeight.bold, fontSize: 20),
+                      textAlign: TextAlign.center,
+                    ),
 
-                  Text(
-                    'Species details: The ' + animalName + animalDetails,
-                    style: TextStyle(height: 2, fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
+                    Text(
+                      animalDetails,
+                      style: TextStyle(height: 2, fontSize: 20),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              )
             );
           }
         }
