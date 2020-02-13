@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'screens/home_screen/home_screen.dart' as home;
+import 'services/animal_discovery.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
