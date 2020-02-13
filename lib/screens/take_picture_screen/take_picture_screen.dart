@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bear_grylls/widgets/box_container.dart';
+import 'package:bear_grylls/services/classify_species.dart';
 
 import 'widgets/capture_button.dart';
 import 'package:camera/camera.dart';
@@ -69,6 +70,10 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
       // Attempt to take a picture and log where it's been saved.
       await _controller.takePicture(path);
+
+      var sc = SpeciesClassifier();
+      var species = await sc.getSpecies(path);
+      print(species); // Not actually needed but makes the analyzer happy
 
       // If the picture was taken, display it on a new screen.
       await Navigator.push(
