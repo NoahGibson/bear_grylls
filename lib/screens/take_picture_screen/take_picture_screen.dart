@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bear_grylls/widgets/box_container.dart';
-import 'package:bear_grylls/widgets/classify_species.dart';
+import 'package:bear_grylls/services/classify_species.dart';
 
 import 'widgets/capture_button.dart';
 import 'package:camera/camera.dart';
