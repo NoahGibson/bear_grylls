@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66844b-0358-49cc-a4f9-782e2e5c5e05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart" afterDir="false" />
     </list>
@@ -35,8 +34,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                   </folding>
@@ -51,8 +50,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="91" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
                   <folding>
                     <element signature="e#0#17#0" expanded="true" />
                   </folding>
@@ -469,8 +468,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+        <state relative-caret-position="187">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -479,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="9" column="91" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>

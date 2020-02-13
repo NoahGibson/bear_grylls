@@ -10,7 +10,6 @@ import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
 import '../picture_details_screen/picture_details_screen.dart';
-import '../../services/classify_species.dart' as classify;
 
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
