@@ -72,7 +72,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       await _controller.takePicture(path);
 
       var sc = SpeciesClassifier();
-      var species = await sc.getSpecies('assets/image.jpg');
+      var species = await sc.getSpecies(path);
       print(species); // Not actually needed but makes the analyzer happy
 
       // If the picture was taken, display it on a new screen.
