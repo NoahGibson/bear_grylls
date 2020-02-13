@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:bear_grylls/widgets/box_container.dart';
 import 'package:bear_grylls/widgets/classify_species.dart';
@@ -74,6 +73,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
       var sc = SpeciesClassifier();
       var species = await sc.getSpecies('assets/image.jpg');
+      print(species); // Not actually needed but makes the analyzer happy
 
       // If the picture was taken, display it on a new screen.
       await Navigator.push(
