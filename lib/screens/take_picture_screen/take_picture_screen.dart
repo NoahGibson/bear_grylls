@@ -10,6 +10,7 @@ import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
 
 import '../picture_details_screen/picture_details_screen.dart';
+import '../../services/classify_species.dart' as classify;
 
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
@@ -75,11 +76,12 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       var species = await sc.getSpecies(path);
       print(species); // Not actually needed but makes the analyzer happy
 
+
       // If the picture was taken, display it on a new screen.
       await Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => PictureDetailsScreen(imagePath: path),
+          builder: (context) => PictureDetailsScreen(species, imagePath: path),
         ),
       );
     } catch (e) {
@@ -87,6 +89,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       print(e);
     }
   }
+
 
   @override
   void initState() {

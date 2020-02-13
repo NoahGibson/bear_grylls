@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 class PictureDetailsScreen extends StatelessWidget {
 
   final String imagePath;
-  final String animalName="";
-  //static String animalName=classify.SpeciesClassifier().getSpecies(imagePath);
-  final String details=" ";
-  const PictureDetailsScreen({Key key, this.imagePath}) : super(key: key);
+  final String animalName;
+  final String details=" is dangerous when provoked. Keep a safe distance.";
+  const PictureDetailsScreen(this.animalName, {Key key, this.imagePath}) : super(key: key);
+  //const PictureDetailsScreen({Key key, this.imagePath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class PictureDetailsScreen extends StatelessWidget {
             ),
 
             Text(
-              'Species details: ' + details,
+              'Species details: The ' + animalName +details,
               style: TextStyle(height: 2, fontSize: 20),
               textAlign: TextAlign.center,
             ),
