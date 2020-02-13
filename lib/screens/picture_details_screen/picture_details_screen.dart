@@ -1,12 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import '../../services/classify_species.dart' as classify;
 
 class PictureDetailsScreen extends StatelessWidget {
 
   final String imagePath;
-  final String animalName="Snake";
-  final String details="Details about the snake";
+  final String animalName="";
+  //static String animalName=classify.SpeciesClassifier().getSpecies(imagePath);
+  final String details=" ";
   const PictureDetailsScreen({Key key, this.imagePath}) : super(key: key);
 
   @override

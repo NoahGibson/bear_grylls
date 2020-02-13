@@ -191,13 +191,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.3"
-  starflut:
-    dependency: "direct dev"
-    description:
-      path: "..\\starcore_for_flutter\\starflut"
-      relative: true
-    source: path
-    version: "0.6.0"
   stream_channel:
     dependency: transitive
     description:
