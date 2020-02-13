@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66844b-0358-49cc-a4f9-782e2e5c5e05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/unicodedata.cpython-36m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/zlib.cpython-36m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/arm64-v8a/libpython3.6m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/arm64-v8a/libstar_python36.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/armeabi/libpython3.6m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/armeabi/libstar_python36.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/armeabiv7a/libpython3.6m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/armeabiv7a/libstar_python36.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/x86/libpython3.6m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/x86/libstar_python36.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/x86_64/libpython3.6m.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/jniLibs/x86_64/libstar_python36.so" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starfiles/python3.6.zip" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +34,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/services/classify_species.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+                <state relative-caret-position="201">
+                  <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -48,23 +58,14 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#17#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-451">
-                  <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -98,8 +99,8 @@
         <option value="$PROJECT_DIR$/lib/camera.dart" />
         <option value="$PROJECT_DIR$/lib/screens/home_screen/home_screen.dart" />
         <option value="$PROJECT_DIR$/lib/services/classify_species.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" />
       </list>
     </option>
   </component>
@@ -130,6 +131,11 @@
             <path>
               <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
               <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
@@ -372,20 +378,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/services/classify_species.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="201">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,6 +390,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-451">
           <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

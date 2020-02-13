@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import '../../services/classify_species.dart' as classify;
+//import '../../services/classify_species.dart' as classify;
 
 class PictureDetailsScreen extends StatelessWidget {
 
