@@ -75,11 +75,12 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       var species = await sc.getSpecies(path);
       print(species); // Not actually needed but makes the analyzer happy
 
+
       // If the picture was taken, display it on a new screen.
       await Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => PictureDetailsScreen(imagePath: path),
+          builder: (context) => PictureDetailsScreen(species, imagePath: path),
         ),
       );
     } catch (e) {
@@ -87,6 +88,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       print(e);
     }
   }
+
 
   @override
   void initState() {
