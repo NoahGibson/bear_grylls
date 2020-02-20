@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66844b-0358-49cc-a4f9-782e2e5c5e05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +16,24 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_26" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4971335">
+    <splitter split-orientation="horizontal" split-proportion="0.39148238">
       <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/main_test.dart">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/services/classify_species.dart">
@@ -31,29 +47,45 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/screens/home_screen/home_screen.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+                <state relative-caret-position="340">
+                  <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
                   <folding>
-                    <element signature="e#0#20#0" expanded="true" />
+                    <element signature="e#0#39#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart">
+            <entry file="file://$PROJECT_DIR$/.travis.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="91" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
+                <state relative-caret-position="1887">
+                  <caret line="111" column="43" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/screens/take_picture_screen/widgets/capture_button.dart">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
                   <folding>
-                    <element signature="e#0#17#0" expanded="true" />
+                    <element signature="e#0#48#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/main.dart">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -96,6 +128,7 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/lib/screens/take_picture_screen/take_picture_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/picture_details_screen/picture_details_screen.dart" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -120,6 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,7 +165,17 @@
             <path>
               <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
               <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bear_grylls" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bear_grylls" type="b2602c69:ProjectViewProjectNode" />
@@ -205,8 +250,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,7 +262,9 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\stacy\Documents\Github\bear_grylls" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -390,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5661">
-          <caret line="333" column="24" lean-forward="true" selection-start-line="333" selection-start-column="24" selection-end-line="333" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/facts.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207">
@@ -406,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="136">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -438,7 +476,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/home_screen/home_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="340">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
