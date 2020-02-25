@@ -80,8 +80,8 @@ jobs:
         - flutter precache
         - flutter doctor -v
         # Wait for emulator to finish startup.
-        - adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
+        #- adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
         - ./scripts/android-wait-for-emulator.sh
-        #- adb shell input keyevent 82
+        - adb shell input keyevent 82
         - flutter devices
       script: travis_retry flutter drive
