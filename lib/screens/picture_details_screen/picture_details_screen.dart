@@ -17,13 +17,16 @@ class PictureDetailsScreen extends StatefulWidget {
 class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
 
   String animalName = "";
+  String kingdomName = "";
   String animalDetails = "";
   Future<void> _initializeDetailsFuture;
   bool _detailsAreInitialized;
 
   void _getAnimalName(String imagePath) async {
     SpeciesClassifierAdaptor speciesClassifier = MicrosoftSpeciesClassifier();
-    animalName = await speciesClassifier.getSpecies(imagePath);
+    var animalDetails = await speciesClassifier.getSpecies(imagePath);
+    kingdomName = animalDetails[0];
+    animalName = animalDetails[1];
   }
 
   void _getAnimalDetails(String animalName) async {

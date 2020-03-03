@@ -8,7 +8,7 @@ abstract class SpeciesClassifierAdaptor {
   @protected
   parseResponse(Response response);
 
-  getSpecies(var imagePath) async {
+  getSpecies(String imagePath) async {
     final response = await makePostRequest(imagePath);
     final species = parseResponse(response);
     return species;

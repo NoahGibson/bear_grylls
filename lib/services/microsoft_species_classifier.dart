@@ -41,7 +41,8 @@ class MicrosoftSpeciesClassifier extends SpeciesClassifierAdaptor{
       return 'no name';
     }
     final responseBody = json.decode(response.body);
+    final kingdom = responseBody['predictions'][0]['kingdom_common'];
     final commonName = responseBody['predictions'][0]['species_common'];
-    return commonName;
+    return [kingdom, commonName];
   }
 }
