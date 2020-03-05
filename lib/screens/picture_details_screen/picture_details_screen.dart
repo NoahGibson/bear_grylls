@@ -1,7 +1,8 @@
 import 'dart:io';
 
 import 'package:bear_grylls/services/animal_discovery.dart';
-import 'package:bear_grylls/services/classify_species.dart';
+import 'package:bear_grylls/services/microsoft_species_classifier.dart';
+import 'package:bear_grylls/services/species_classifier_adaptor.dart';
 import 'package:flutter/material.dart';
 
 class PictureDetailsScreen extends StatefulWidget {
@@ -16,12 +17,16 @@ class PictureDetailsScreen extends StatefulWidget {
 class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
 
   String animalName = "";
+  String kingdomName = "";
   String animalDetails = "";
   Future<void> _initializeDetailsFuture;
   bool _detailsAreInitialized;
 
   void _getAnimalName(String imagePath) async {
-    animalName = await SpeciesClassifier().getSpecies(imagePath);
+    SpeciesClassifierAdaptor speciesClassifier = MicrosoftSpeciesClassifier();
+    var animalDetails = await speciesClassifier.getSpecies(imagePath);
+    kingdomName = animalDetails[0];
+    animalName = animalDetails[1];
   }
 
   void _getAnimalDetails(String animalName) async {
