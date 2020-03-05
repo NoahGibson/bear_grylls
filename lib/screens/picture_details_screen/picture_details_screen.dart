@@ -109,18 +109,41 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
                       ),
 
                       Positioned(
+                        bottom: 430,
+                        left: 70,
+                        right: 70,
+                        child: BoxContainer(
+                          width: 220,
+                          height: 30,
+                          child: Center(
+                            child: Text(
+                              "Details",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
+                            ),
+                          ),
+                        )
+                      ),
+
+                      Positioned(
                         bottom: 30,
                         left: 30,
                         right: 30,
                         child: BoxContainer(
                           child: SingleChildScrollView(
-                            child: Text(
-                              animalDetails,
-                              style: TextStyle(fontSize: 20, color: Colors.white),
-                              textAlign: TextAlign.center,
-                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(8),
+                              child: Text(
+                                animalDetails,
+                                style: TextStyle(fontSize: 20, color: Colors.white),
+                                textAlign: TextAlign.center,
+                              ),
+                            )
                           ),
-                          height: 430,
+                          height: 390,
                           width: 300
                         ),
                       ),
