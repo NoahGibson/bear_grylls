@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:bear_grylls/services/animal_discovery.dart';
 import 'package:bear_grylls/services/microsoft_species_classifier.dart';
+import 'package:bear_grylls/services/plant_discovery.dart';
 import 'package:bear_grylls/services/species_classifier_adaptor.dart';
 import 'package:flutter/material.dart';
 
@@ -31,14 +32,22 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
     animalName = animalDetails[1];
   }
 
-  void _getAnimalDetails(String animalName) async {
-    animalDetails = await AnimalDiscovery().getFacts(animalName);
+  void _getAnimalDetails(String animalName, String kingdomName) async {
+    String lowerCaseKingdom = kingdomName.toLowerCase();
+    if (lowerCaseKingdom == "animals") {
+      animalDetails = await AnimalDiscovery().getFacts(animalName);
+    } else if (lowerCaseKingdom == "plants") {
+      animalDetails = await PlantDiscovery().getFacts(animalName);
+    } else {
+      print("No known kingdom name found; defaulting to Animals");
+      animalDetails = await AnimalDiscovery().getFacts(animalName);
+    }
   }
 
   Future<void> _initScreenInfo() async {
     await _getAnimalName(widget.imagePath);
     if (animalName != "no name") {
-      await _getAnimalDetails(animalName);
+      await _getAnimalDetails(animalName, kingdomName);
     }
     _detailsAreInitialized = true;
   }
@@ -100,18 +109,41 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
                       ),
 
                       Positioned(
+                        bottom: 430,
+                        left: 70,
+                        right: 70,
+                        child: BoxContainer(
+                          width: 220,
+                          height: 30,
+                          child: Center(
+                            child: Text(
+                              "Details",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
+                            ),
+                          ),
+                        )
+                      ),
+
+                      Positioned(
                         bottom: 30,
                         left: 30,
                         right: 30,
                         child: BoxContainer(
                           child: SingleChildScrollView(
-                            child: Text(
-                              animalDetails,
-                              style: TextStyle(fontSize: 20, color: Colors.white),
-                              textAlign: TextAlign.center,
-                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(8),
+                              child: Text(
+                                animalDetails,
+                                style: TextStyle(fontSize: 20, color: Colors.white),
+                                textAlign: TextAlign.center,
+                              ),
+                            )
                           ),
-                          height: 430,
+                          height: 390,
                           width: 300
                         ),
                       ),
