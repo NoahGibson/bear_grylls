@@ -5,6 +5,8 @@ import 'package:bear_grylls/services/microsoft_species_classifier.dart';
 import 'package:bear_grylls/services/species_classifier_adaptor.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/box_container.dart';
+
 class PictureDetailsScreen extends StatefulWidget {
   final String imagePath;
 
@@ -57,40 +59,71 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Results')),
-      body: FutureBuilder<void>(
-        future: _initializeDetailsFuture,
-        builder: (context, snapshot) {
-          if (!_detailsAreInitialized) {
-            return Center(child: CircularProgressIndicator());
-          } else {
-            return SingleChildScrollView(
-              child: Container(
-                child: Column(
+      body: Stack(
+        alignment: FractionalOffset.center,
+        children: <Widget>[
 
-                  children: <Widget>[
+          Positioned.fill(
+            child: Image.file(File(widget.imagePath)),
+          ),
 
-                    Image.file(File(widget.imagePath),
-                      width: 200.0,
-                    ),
+          FutureBuilder<void>(
+            future: _initializeDetailsFuture,
+            builder: (context, snapshot) {
+              if (!_detailsAreInitialized) {
+                return Center(child: CircularProgressIndicator());
+              } else {
+                return Container(
+                  alignment: FractionalOffset.center,
+                  child: Stack(
+                    children: <Widget>[
 
-                    Text(
-                      'Identified as a: ' + animalName,
-                      style: TextStyle(height: 2, fontWeight: FontWeight.bold, fontSize: 20),
-                      textAlign: TextAlign.center,
-                    ),
+                      Positioned(
+                        top: 40,
+                        right: 30,
+                        left: 30,
+                        child: BoxContainer(
+                          child: Center(
+                            child: Text(
+                              animalName,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 36,
+                                color: Colors.white
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          height: 100,
+                          width: 300
+                        ),
+                      ),
 
-                    Text(
-                      animalDetails,
-                      style: TextStyle(height: 2, fontSize: 20),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              )
-            );
-          }
-        }
+                      Positioned(
+                        bottom: 30,
+                        left: 30,
+                        right: 30,
+                        child: BoxContainer(
+                          child: SingleChildScrollView(
+                            child: Text(
+                              animalDetails,
+                              style: TextStyle(fontSize: 20, color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          height: 430,
+                          width: 300
+                        ),
+                      ),
+
+                    ],
+                  )
+                );
+              }
+            },
+          ),
+
+        ],
       )
     );
   }
