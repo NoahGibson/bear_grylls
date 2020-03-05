@@ -35,6 +35,7 @@ dev_dependencies:
 #  starflut:
     #path: ../starcore_for_flutter/starflut
   pedantic: ^1.0.0
+  mockito:
 
 
 # For information on the generic Dart part of this file, see the
