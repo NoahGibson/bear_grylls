@@ -11,8 +11,8 @@ void main() {
     //final buttonFinder = find.byValueKey('increment');
     final takeAPicTextFinder = find.byValueKey('takeAPicTest');
     final bearGryllsTextFinder = find.byValueKey('BearGryllsTest1');
-    final enterADescTextFinder = find.byValueKey('enterADescTest');
-    final detailsTextFinder = find.byValueKey('details');
+    //final enterADescTextFinder = find.byValueKey('enterADescTest');
+    //final detailsTextFinder = find.byValueKey('details');
 
     FlutterDriver driver;
 
@@ -24,7 +24,7 @@ void main() {
     // Close the connection to the driver after the tests have completed.
     tearDownAll(() async {
       if (driver != null) {
-        driver.close();
+        await driver.close();
       }
     });
 
