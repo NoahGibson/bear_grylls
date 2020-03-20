@@ -118,6 +118,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
                           child: Center(
                             child: Text(
                               "Details",
+                              key: Key('details'),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
