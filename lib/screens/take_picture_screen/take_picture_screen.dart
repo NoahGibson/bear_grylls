@@ -134,6 +134,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
                       child: Text(
                         "Enter a Description",
                         textAlign: TextAlign.center,
+                        key: Key('enterADescTest'),
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15,

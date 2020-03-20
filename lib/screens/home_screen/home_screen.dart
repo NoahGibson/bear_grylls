@@ -8,11 +8,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bear Grylls'),
+        title: Text(('Bear Grylls'),
+          key: Key('BearGryllsTest1')),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Take a Picture'),
+          child: Text(('Take a Picture'),
+            key: Key('takeAPicTest')),
           onPressed: () {
             Navigator.push(
               context,
