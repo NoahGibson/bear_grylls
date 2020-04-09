@@ -13,7 +13,7 @@ class MicrosoftSpeciesClassifier extends SpeciesClassifierAdaptor{
   };
 
   final queryParameters = {
-    'topK': '1',
+    'topK': '2',
     'predictMode': 'classifyAndDetect',
   };
 
@@ -37,12 +37,17 @@ class MicrosoftSpeciesClassifier extends SpeciesClassifierAdaptor{
 
   @override
   parseResponse(Response response) {
+    var kingdom = '';
+    var commonName = '';
     if (response.statusCode != 200) {
-      return 'no name';
+      return [kingdom, commonName];
     }
     final responseBody = json.decode(response.body);
-    final kingdom = responseBody['predictions'][0]['kingdom_common'];
-    final commonName = responseBody['predictions'][0]['species_common'];
+    final confidence = responseBody['predictions'][0]['confidence'] + responseBody['predictions'][1]['confidence'];
+    if (confidence >= 40) {
+      kingdom = responseBody['predictions'][0]['kingdom_common'];
+      commonName = responseBody['predictions'][0]['species_common'];
+    }
     return [kingdom, commonName];
   }
 }
