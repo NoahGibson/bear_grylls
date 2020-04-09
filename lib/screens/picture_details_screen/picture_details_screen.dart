@@ -5,6 +5,7 @@ import 'package:bear_grylls/services/microsoft_species_classifier.dart';
 import 'package:bear_grylls/services/plant_discovery.dart';
 import 'package:bear_grylls/services/species_classifier_adaptor.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../widgets/box_container.dart';
 
@@ -22,6 +23,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
   String animalName = "";
   String kingdomName = "";
   String animalDetails = "";
+  double dangerous = 0.2;
   Future<void> _initializeDetailsFuture;
   bool _detailsAreInitialized;
 
@@ -42,6 +44,15 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
       print("No known kingdom name found; defaulting to Animals");
       animalDetails = await AnimalDiscovery().getFacts(animalName);
     }
+    if (animalDetails.contains("dangerous") ||
+        animalDetails.contains("danger") || animalDetails.contains("posion") ||
+        animalDetails.contains("posionous") ||
+        animalDetails.contains("large") || animalDetails.contains("big") ||
+        animalDetails.contains("aggresion") ||
+        animalDetails.contains("aggresive") ||
+        animalDetails.contains("attacks")){
+      dangerous = 0.7;
+  }
   }
 
   Future<void> _initScreenInfo() async {
@@ -105,6 +116,23 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
                           ),
                           height: 100,
                           width: 300
+                        ),
+                      ),
+
+                      Positioned(
+                        bottom: 400,
+                        right: 30,
+                        left: 30,
+                        child: LinearPercentIndicator(
+                          width: 200.0,
+                          animation: true,
+                          lineHeight: 20.0,
+                          leading: new Text("Friendly "),
+                          trailing: new Text(" Highly Dangerous"),
+                          animationDuration: 2000,
+                          percent: dangerous,
+                          linearStrokeCap: LinearStrokeCap.roundAll,
+                          progressColor: Colors.green,
                         ),
                       ),
 
