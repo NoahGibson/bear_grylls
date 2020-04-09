@@ -107,6 +107,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       // Wait until the controller is initialized before displaying the
       // camera preview. Use a FutureBuilder to display a loading spinner
@@ -122,13 +124,17 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
             return Stack(
               alignment: FractionalOffset.center,
               children: <Widget>[
+
+                // Camera Preview
                 Positioned.fill(
                   child: CameraPreview(_controller),
                 ),
+
+                // Enter Description option
                 Positioned(
                   top: 30,
                   child: BoxContainer(
-                    width: 220,
+                    width: screenWidth - 150,
                     height: 30,
                     child: Center(
                       child: Text(
@@ -142,6 +148,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
                     ),
                   )
                 ),
+
+                // Down Button
                 Positioned(
                   top: 65,
                   child: BoxContainer(
@@ -153,6 +161,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
                     ),
                   ),
                 ),
+
+                // Help Button
                 Positioned(
                   top: 30,
                   right: 30,
@@ -165,6 +175,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
                     ),
                   ),
                 ),
+
+                // Picture Capture Button
                 Positioned(
                   bottom: 20,
                   child: CaptureButton(
