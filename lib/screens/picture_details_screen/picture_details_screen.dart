@@ -38,7 +38,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
     kingdomName = animalDetails[0];
     animalName = animalDetails[1];
     if(animalName.contains("Alligator") || animalName.contains("Crocodile") || animalName.contains("Bear") || animalName.contains("Wolf")|| animalName.contains("Shark")){
-      dangerous = 0.8;
+      dangerous = 0.90;
     }
   }
 
@@ -59,7 +59,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
         animalDetails.contains("aggresion") ||
         animalDetails.contains("aggresive") ||
         animalDetails.contains("attacks")){
-      dangerous = 0.7;
+      dangerous = 0.85;
   }
   }
 
@@ -127,7 +127,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
                                 ),
                               ),
                               LinearPercentIndicator(
-                                width: 210.0,
+                                width: 200.0,
                                 animation: true,
                                 lineHeight: 20.0,
                                 leading: Text("  Friendly ", style: TextStyle(fontWeight: FontWeight.bold,
