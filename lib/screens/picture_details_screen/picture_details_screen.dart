@@ -46,7 +46,7 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
 
   Future<void> _initScreenInfo() async {
     await _getAnimalName(widget.imagePath);
-    if (animalName != "no name") {
+    if (animalName != "Not recognized") {
       await _getAnimalDetails(animalName, kingdomName);
     }
     _detailsAreInitialized = true;
