@@ -8,6 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../widgets/box_container.dart';
+import 'dart:math';
+
+Random random = Random();
+double randomNumber = (random.nextDouble()/2);
 
 class PictureDetailsScreen extends StatefulWidget {
   final String imagePath;
@@ -23,15 +27,19 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
   String animalName = "";
   String kingdomName = "";
   String animalDetails = "";
-  double dangerous = 0.2;
+  double dangerous = randomNumber;
   Future<void> _initializeDetailsFuture;
   bool _detailsAreInitialized;
+
 
   void _getAnimalName(String imagePath) async {
     SpeciesClassifierAdaptor speciesClassifier = MicrosoftSpeciesClassifier();
     var animalDetails = await speciesClassifier.getSpecies(imagePath);
     kingdomName = animalDetails[0];
     animalName = animalDetails[1];
+    if(animalName.contains("Alligator") || animalName.contains("Crocodile") || animalName.contains("Bear") || animalName.contains("Wolf")|| animalName.contains("Shark")){
+      dangerous = 0.8;
+    }
   }
 
   void _getAnimalDetails(String animalName, String kingdomName) async {
@@ -103,38 +111,39 @@ class _PictureDetailsScreenState extends State<PictureDetailsScreen> {
                         right: 30,
                         left: 30,
                         child: BoxContainer(
-                          child: Center(
-                            child: Text(
-                              animalName,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 36,
-                                color: Colors.white
+                            height: 100,
+                            width: 300,
+                          child: Stack(
+                            children: <Widget>[
+                              Center(
+                                child: Text(
+                                  animalName,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 36,
+                                    color: Colors.white
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                          height: 100,
-                          width: 300
+                              LinearPercentIndicator(
+                                width: 210.0,
+                                animation: true,
+                                lineHeight: 20.0,
+                                leading: Text("  Friendly ", style: TextStyle(fontWeight: FontWeight.bold,
+                                      color: Colors.white)),
+                                trailing: Text(" Dangerous", style: TextStyle(fontWeight: FontWeight.bold,
+                                    color: Colors.white)),
+                                animationDuration: 2000,
+                                percent: dangerous,
+                                linearStrokeCap: LinearStrokeCap.roundAll,
+                                progressColor: Colors.lightBlue[100],
+                              ),
+                            ]
+                          )
                         ),
                       ),
 
-                      Positioned(
-                        bottom: 400,
-                        right: 30,
-                        left: 30,
-                        child: LinearPercentIndicator(
-                          width: 200.0,
-                          animation: true,
-                          lineHeight: 20.0,
-                          leading: new Text("Friendly "),
-                          trailing: new Text(" Highly Dangerous"),
-                          animationDuration: 2000,
-                          percent: dangerous,
-                          linearStrokeCap: LinearStrokeCap.roundAll,
-                          progressColor: Colors.green,
-                        ),
-                      ),
 
                       Positioned(
                         bottom: 430,
