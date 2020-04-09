@@ -37,8 +37,8 @@ class MicrosoftSpeciesClassifier extends SpeciesClassifierAdaptor{
 
   @override
   parseResponse(Response response) {
-    var kingdom = '';
-    var commonName = '';
+    var kingdom = 'Not recognized';
+    var commonName = 'Not recognized';
     if (response.statusCode != 200) {
       return [kingdom, commonName];
     }
