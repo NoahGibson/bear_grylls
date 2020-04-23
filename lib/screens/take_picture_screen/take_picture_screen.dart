@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:bear_grylls/screens/picture_details_screen/description_details_screen.dart';
 import 'package:bear_grylls/widgets/box_container.dart';
 
 import 'widgets/capture_button.dart';
@@ -20,6 +21,7 @@ class TakePictureScreen extends StatefulWidget {
 class _TakePictureScreenState extends State<TakePictureScreen> {
 
   CameraController _controller;
+  TextEditingController _textEditingController;
   Future<void> _initializeControllerFuture;
 
   Future _initCameraController(CameraDescription cameraDescription) async {
@@ -83,6 +85,21 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     }
   }
 
+  void _getText(String input) async {
+    try {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => DescriptionDetailsScreen(description: input),
+        ),
+      );
+    } catch (e) {
+      // If an error occurs, log the error to the console.
+      print(e);
+    }
+
+  }
+
   @override
   void initState() {
     super.initState();
@@ -96,6 +113,9 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     }).catchError((err) {
       print('Error: $err.code\nError Message: $err.message');
     });
+
+    //Textcontroller
+    _textEditingController = TextEditingController();
   }
 
   @override
@@ -131,15 +151,10 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
                     width: 220,
                     height: 30,
                     child: Center(
-                      child: Text(
-                        "Enter a Description",
-                        textAlign: TextAlign.center,
-                        key: Key('enterADescTest'),
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                        ),
-                      ),
+                      child: TextField(
+                        controller: _textEditingController,
+                        onSubmitted: (value) { _getText(value); }
+                      )
                     ),
                   )
                 ),
