@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:bear_grylls/services/animal_discovery.dart';
+import 'package:bear_grylls/services/description_classifier.dart';
 import 'package:bear_grylls/services/microsoft_species_classifier.dart';
 import 'package:bear_grylls/services/plant_discovery.dart';
 import 'package:bear_grylls/services/species_classifier_adaptor.dart';
@@ -28,7 +29,33 @@ class _DescriptionDetailsScreenState extends State<DescriptionDetailsScreen> {
   void _getAnimalName(String description) async {
     SpeciesClassifierAdaptor speciesClassifier = MicrosoftSpeciesClassifier();
     //var animalDetails = await speciesClassifier.getSpecies(description);
-    var animalDetails = ["animals", "brown bear"];
+    var words = description.split(" ");
+    print(words);
+    Map descriptionMap = Map();
+    descriptionMap['kingdom'] = 'animal';
+    if (words.contains('plant')) {
+      descriptionMap['kingdom'] = 'plants';
+    }
+    for (var i = 0; i <= words.length; i++) {
+      if (words.contains('brown')) {
+        descriptionMap['color'] = 'brown';
+      }
+      if (words.contains('white')) {
+        descriptionMap['color'] = 'white';
+      }
+      if (words.contains('gray')) {
+        descriptionMap['color'] = 'gray';
+      }
+      if (words.contains('green')) {
+        descriptionMap['color'] = 'green';
+      }
+      if (words.contains('black')) {
+        descriptionMap['color'] = 'black';
+      }
+    }
+    DescriptionClassifier d = DescriptionClassifier();
+    var animalDetails = d.getSpecies(descriptionMap);
+    //var animalDetails = ["animals", "brown bear"];
     kingdomName = animalDetails[0];
     animalName = animalDetails[1];
   }
